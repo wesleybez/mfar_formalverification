@@ -1,0 +1,46 @@
+<?xml version='1.0'?>
+<adtree>
+	<node refinement="disjunctive">
+		<label>MFA-R Violation</label>
+		<node refinement="disjunctive">
+			<label>Acessar sem
+autenticar</label>
+			<node refinement="conjunctive">
+				<label>Publicar dados
+anonimamente</label>
+			</node>
+			<node refinement="conjunctive">
+				<label>Publicar dados
+fora de AUTH2</label>
+			</node>
+			<node refinement="disjunctive">
+				<label>Publicar dados
+sem reputação</label>
+			</node>
+		</node>
+		<node refinement="conjunctive">
+			<label>Spoofing</label>
+			<node refinement="disjunctive">
+				<label>Passar-se por sensor</label>
+				<node refinement="disjunctive">
+					<label>Violar Credenciais</label>
+					<node refinement="conjunctive">
+						<label>Adivinhar login/senha</label>
+					</node>
+					<node refinement="conjunctive">
+						<label>Gerar login/senha</label>
+					</node>
+				</node>
+				<node refinement="disjunctive">
+					<label>Spoofing AUTH_CODE</label>
+					<node refinement="conjunctive">
+						<label>Adivinhar AUTH_CODE</label>
+					</node>
+					<node refinement="conjunctive">
+						<label>Gerar AUTH_CODE</label>
+					</node>
+				</node>
+			</node>
+		</node>
+	</node>
+</adtree>
